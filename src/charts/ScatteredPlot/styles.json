@@ -1,0 +1,238 @@
+{
+  "chartContainer": {
+    "displayNameHead": "Chart Container",
+    "width": {
+      "displayName": "Width",
+      "value": 0
+    },
+    "height": {
+      "displayName": "Height",
+      "value": 500
+    },
+    "backgroundImage": {
+      "displayName": "Background Image",
+      "value": ""
+    }
+  },
+  "chartColor": {
+    "displayNameHead": "Chart Color",
+    "backgroundColor": {
+      "displayName": "Background Color",
+      "value": "#ffffff"
+    },
+    "fill": {
+      "displayName": "Fill Color",
+      "value": "#fa5102"
+    }
+  },
+  "tooltip": {
+    "displayNameHead": "Tooltip",
+    "fontSize": {
+      "displayName": "Font Size",
+      "value": "14px"
+    },
+    "fontFamily": {
+      "displayName": "Font Family",
+      "value": "Arial"
+    },
+    "textColor": {
+      "displayName": "Text Color",
+      "value": "rgb(102, 102, 102)"
+    },
+    "padding": {
+      "displayName": "Padding",
+      "value": "10px"
+    },
+    "bgColor": {
+      "displayName": "Background Color",
+      "value": "#ffffff"
+    },
+    "borderColor": {
+      "displayName": "Border Color",
+      "value": "#000000"
+    },
+    "borderRadius": {
+      "displayName": "Border Radius",
+      "value": "4px"
+    },
+    "borderWidth": {
+      "displayName": "Border Width",
+      "value": "1px"
+    }
+  },
+  "xAxis": {
+    "displayNameHead": "X Axis",
+    "title": {
+      "displayNameSubHead": "X Axis Title",
+      "view": {
+        "displayName": "View",
+        "value": true
+      },
+      "value": {
+        "displayName": "Value",
+        "value": "X Axis Label"
+      },
+      "fontFamily": {
+        "displayName": "Font Family",
+        "value": "Arial"
+      },
+      "color": {
+        "displayName": "Color",
+        "value": "#333333"
+      },
+      "fontSize": {
+        "displayName": "Font Size",
+        "value": "16px"
+      }
+    },
+    "axisLine": {
+      "displayNameSubHead": "Axis Line",
+      "color": {
+        "displayName": "Color",
+        "value": "#333333"
+      }
+    },
+    "axisTick": {
+      "displayNameSubHead": "Axis Tick",
+      "color": {
+        "displayName": "Color",
+        "value": "#000000"
+      }
+    },
+    "tickLabel": {
+      "displayNameSubHead": "Tick Label",
+      "rotation": {
+        "displayName": "Rotation",
+        "value": 0
+      },
+      "fontFamily": {
+        "displayName": "Font Family",
+        "value": "Arial"
+      },
+      "color": {
+        "displayName": "Color",
+        "value": "#000000"
+      },
+      "fontSize": {
+        "displayName": "Font Size",
+        "value": "12px"
+      },
+      "textAnchor": {
+        "displayName": "Placement",
+        "value": "middle"
+      }
+    }
+  },
+  "yAxis": {
+    "displayNameHead": "Y Axis",
+    "title": {
+      "displayNameSubHead": "Y Axis Title",
+      "view": {
+        "displayName": "View",
+        "value": true
+      },
+      "value": {
+        "displayName": "Value",
+        "value": "Y Axis Label"
+      },
+      "fontFamily": {
+        "displayName": "Font Family",
+        "value": "Arial"
+      },
+      "color": {
+        "displayName": "Color",
+        "value": "#333333"
+      },
+      "fontSize": {
+        "displayName": "Font Size",
+        "value": "16px"
+      }
+    },
+    "axisLine": {
+      "displayNameSubHead": "Axis Line",
+      "color": {
+        "displayName": "Color",
+        "value": "#333333"
+      }
+    },
+    "axisTick": {
+      "displayNameSubHead": "Axis Tick",
+      "color": {
+        "displayName": "Color",
+        "value": "#000000"
+      }
+    },
+    "tickLabel": {
+      "displayNameSubHead": "Tick Label",
+      "fontFamily": {
+        "displayName": "Font Family",
+        "value": "Arial"
+      },
+      "color": {
+        "displayName": "Color",
+        "value": "#000000"
+      },
+      "fontSize": {
+        "displayName": "Font Size",
+        "value": "12px"
+      }
+    }
+  },
+  "chartTitle": {
+    "displayNameHead": "Chart Title",
+    "view": {
+      "displayName": "View",
+      "value": true
+    },
+    "value": {
+      "displayName": "Value",
+      "value": "Scatter Plot Title"
+    },
+    "fontFamily": {
+      "displayName": "Font Family",
+      "value": "Arial"
+    },
+    "color": {
+      "displayName": "Color",
+      "value": "#333333"
+    },
+    "fontSize": {
+      "displayName": "Font Size",
+      "value": "16px"
+    },
+    "fontWeight": {
+      "displayName": "Font Weight",
+      "value": "bold"
+    }
+  },
+  "gridLine": {
+    "displayNameHead": "Grid Line",
+    "view": {
+      "displayName": "View",
+      "value": true
+    },
+    "color": {
+      "displayName": "Color",
+      "value": "#c7d2da"
+    },
+    "opacity": {
+      "displayName": "Opacity",
+      "value": "0.7"
+    }
+  },
+  "legend": {
+    "displayNameHead": "Legend",
+    "placement": {
+      "displayName": "Placement",
+      "value": "right"
+    },
+    "fontFamily": {
+      "displayName": "Font Family",
+      "value": "Arial"
+    },
+    "textColor": {
+      "displayName": "Color",
+      "value": "#333"
+    }
+  }
+}

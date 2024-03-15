@@ -1,0 +1,38 @@
+{
+  "chartContainer": {
+    "width": 500,
+    "height": 400
+  },
+  "chartColor": {
+    "fill": "steelblue"
+  },
+  "tooltip": {
+    "fontSize": "14px",
+    "fill": "gray",
+    "tooltipContainer": {
+      "fill": "#fff"
+    }
+  },
+  "axisLabels": {
+    "x": {
+      "view": false,
+      "text": "X Axis Label",
+      "fill": "#333",
+      "fontSize": "14px",
+      "tickLabelOrientation": "rotate(0)",
+      "textAnchor": "middle"
+    },
+    "y": {
+      "view": false,
+      "text": "Y Axis Label",
+      "fill": "#333",
+      "fontSize": "14px"
+    }
+  },
+  "chartTitle": {
+    "view": true,
+    "text": "Calendar Chart Title",
+    "fill": "#333",
+    "fontSize": "18px"
+  }
+}

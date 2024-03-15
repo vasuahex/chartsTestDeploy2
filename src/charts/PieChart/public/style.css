@@ -1,0 +1,88 @@
+/* css/styles.css
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  #chart-container {
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+  }
+   */
+
+   .body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .chart-container {
+    width: 600px;
+    height: 400px;
+    margin: 50px auto;
+  }
+
+   .tooltip {
+    position: absolute;
+    display: block;
+    border-style: solid;
+    white-space: nowrap;
+    z-index: 9999999;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px;
+    transition: opacity 0.2s
+     cubic-bezier(0.23, 1, 0.32, 1) 0s,
+      visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+    background-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-radius: 4px;
+    color: rgb(102, 102, 102);
+    font: 14px;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    /* border-color: rgb(255, 255, 255); */
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+}
+.tooltiparc{
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+.bullet_content{
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+svg ,
+foreignObject{
+  overflow: visible !important;
+}
+.passage{
+  text-align: center;
+  text-anchor: middle;
+}
+.title{
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  margin-top: -40px;
+  font-size: 28px;
+  font-weight: bold;
+  fill: #2F4F4F;
+  text-anchor: middle;
+}
+.body{
+  margin: 0%;
+  padding: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.chart-container-main {
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  min-height: 100vh;
+}
+
+  /* styles.css */
+

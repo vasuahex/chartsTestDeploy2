@@ -1,0 +1,132 @@
+{
+    "chartContainer": {
+      "displayNameHead": "Chart Container",
+      "height": {
+        "displayName": "Height",
+        "value": 550
+      },
+      "width": {
+        "displayName": "Width",
+        "value": 1050
+      },
+      "backgroundImage": {
+        "displayName": "Background Image",
+        "value": ""
+      }
+    },
+    "chartColor": {
+      "displayNameHead": "Chart Color",
+      "backgroundColor": {
+        "displayName": "Background Color",
+        "value": "#ffffff"
+      },
+      "theme": {
+        "displayName": "Theme",
+        "value": "schema1"
+      }
+    },
+    "tooltip": {
+      "displayNameHead": "Tooltip",
+      "fontSize": {
+        "displayName": "Font Size",
+        "value": "14px"
+      },
+      "fontFamily": {
+        "displayName": "Font Family",
+        "value": "Arial"
+      },
+      "textColor": {
+        "displayName": "Text Color",
+        "value": "#ffffff"
+      },
+      "padding": {
+        "displayName": "Padding",
+        "value": "10px"
+      },
+      "bgColor": {
+        "displayName": "Background Color",
+        "value": "#000000"
+      },
+      "borderColor": {
+        "displayName": "Border Color",
+        "value": "#000000"
+      },
+      "borderRadius": {
+        "displayName": "Border Radius",
+        "value": "4px"
+      },
+      "borderWidth": {
+        "displayName": "Border Width",
+        "value": "1px"
+      }
+    },
+    "legend": {
+      "displayNameHead": "Legend",
+      "fontFamily": {
+        "displayName": "Font Family",
+        "value": "Arial"
+      },
+      "textColor": {
+        "displayName": "Color",
+        "value": "#333"
+      },
+      "placement": {
+        "displayName": "Placement",
+        "value": "left"
+      }
+    },
+    "pieLabel": {
+      "displayNameHead": "Pie Label",
+      "fontFamily": {
+        "displayName": "Font Family",
+        "value": "Arial"
+      },
+      "fontSize": {
+        "displayName": "Font Size",
+        "value": "14px"
+      },
+      "color": {
+        "displayName": "Color",
+        "value": "#000000"
+      },
+      "rotation": {
+        "displayName": "Rotation",
+        "value": 0
+      }
+    },
+    "chartTitle": {
+      "displayNameHead": "Chart Title",
+      "view": {
+        "displayName": "View",
+        "value": true
+      },
+      "value": {
+        "displayName": "Value",
+        "value": "Pie Chart Title"
+      },
+      "color": {
+        "displayName": "Color",
+        "value": "#333333"
+      },
+      "fontSize": {
+        "displayName": "Font Size",
+        "value": "20px"
+      },
+      "fontFamily": {
+        "displayName": "Font Family",
+        "value": "Arial"
+      },
+      "fontWeight": {
+        "displayName": "Font Weight",
+        "value": "bold"
+      }
+    },
+    "chart": {
+      "displayNameHead": "Chart",
+      "type": {
+        "displayName": "Type",
+        "value": "pie"
+      }
+    }
+  }
+  

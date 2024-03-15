@@ -1,0 +1,64 @@
+
+
+
+/* Add your styling here if needed */
+
+#chart-container {
+    position: relative;
+}
+
+.legend {
+    cursor: pointer; 
+    font-size: 14px;
+     font-family: Arial, sans-serif;
+}
+
+.circle-legend {
+    stroke-width: 2;
+    fill:#fff
+}
+
+.line-legend {
+    stroke-width: 2;
+}
+
+.inner-circle {
+    stroke-width: 2;
+   
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.tooltip strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tooltip span {
+    display: block;
+}
+
+.line {
+    stroke-width: 2;
+    fill: none;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.tooltip-line {
+    stroke-dasharray: 5, 5;
+    /* Adjust the dash length as needed */
+    stroke: #999;
+    /* Adjust the color as needed */
+}

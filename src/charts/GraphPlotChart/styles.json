@@ -1,0 +1,131 @@
+{
+    "chartContainer": {
+      "displayNameHead":"Chart Container",
+      "width": {
+        "displayName":"Width",
+        "value":800
+      },
+      "height": {
+        "displayName":"Height",
+        "value":600
+    }
+  },
+    "line": {
+      "displayNameHead":"Line",
+      "fill": {
+        "displayName":"Fill",
+        "value":"#333333"
+      }
+    },
+    "links": {
+      "displayNameHead":"Links",
+      "stroke": {
+        "displayName":"Stroke",
+        "value":"#ccc"
+      },
+      "strokeWidth":{
+        "displayName":"Stroke Width",
+        "value":"2px"
+      }
+    },
+    "linkText":{
+      "displayNameHead":"Link Text",
+      "fontFamily":{
+        "displayName":"Font Family",
+        "value":"Arial"
+      },
+      "fontSize":{
+        "displayName":"Font Size",
+        "value":"14px"
+      },
+      "textAnchor":{
+        "displayName":"Text Anchor",
+        "value":"middle"
+      },
+      "fill":{
+        "displayName":"Fill",
+        "value":"#333333"
+      }
+    },
+    "tooltip": {
+      "displayNameHead":"ToolTip",
+      "fontSize": {
+        "displayName":"Font Size",
+        "value":"14px"
+      },
+      "fontFamily": {
+        "displayName":"Font Family",
+        "value":"Arial"
+      },
+      "textColor": {
+        "displayName":"Text Color",
+        "value":"#333333"
+      },
+      "padding": {
+        "displayName":"Padding",
+        "value":"12px"
+      },
+      "bgColor": {
+        "displayName":"Bg Color",
+        "value":"#ffffff"
+      },
+      "Shadow": {
+        "displayName":"Shadow",
+        "value": "2px 2px 5px #888888"
+      },
+      "borderColor": {
+        "displayName":"Border Color",
+        "value":"#1f77b4"
+      },
+      "borderColors":{
+        "displayName":"Border Colors",
+        "value":"#ffffff"
+      },
+      "borderRadius": {
+        "displayName":"Border Radius",
+        "value":"4px"
+      },
+      "borderWidth":{
+        "displayName":"Border Width",
+        "value":"1px"
+      },
+      "view":{
+        "displayName":"View",
+        "value":"bottom"
+      }
+    },
+    "chartColor": {
+      "backgroundColor": "#fff",
+      "colorSchema":"schema1"
+  },
+  "chartTitle": {
+    "displayNameHead":"Chart Title",
+    "view": {
+      "displayName":"View",
+      "value":true
+    },
+    "value":{
+      "displayName":"Value",
+      "value": "Graph Plot Chart"
+    },
+    "color": {
+      "displayName":"Color",
+      "value":"#333333"
+    },
+    "fontSize": {
+      "displayName":"Font Size",
+      "value":"20px"
+    },
+    "fontFamily":{
+      "displayName":"Font Family",
+      "value":"Arial, sans-serif"
+    },
+    "fontWeight":{
+      "displayName":"Font Weight",
+      "value":"bold"
+    }
+  },
+  "chart":{
+    "type":"pie"
+  }
+}
