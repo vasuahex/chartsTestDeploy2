@@ -10,9 +10,9 @@ const VerifyEmail = () => {
 
     return (
         <div>
-            <Suspense>
-                <VerifyEmailContent />
-            </Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
+            <VerifyEmailContent />
+    </Suspense>
         </div>
     );
 };
