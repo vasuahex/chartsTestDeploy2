@@ -16,15 +16,19 @@ export async function POST(req: any) {
         await connectMongoDB();
         await User.create({ name, email, password: hashedPassword, verifyToken: token, verifyTokenExpires: verifyTokenExpires });
         // await SendEmail({email: email, emailType: 'Verify', token: token, code:0})
-        try {
-            await SendEmail({ email: email, emailType: 'Verify', token: token, code: 0 })
+        // try {
+        //     await SendEmail({ email: email, emailType: 'Verify', token: token, code: 0 })
 
-        }
-        catch (error: any) {
-            console.error("Error sending email:", error);
-            // return res.status(Internal server error).json({ message: "Internal server error" });
-            return NextResponse.json({ message: "Internal server error." }, { status: 500 });
-        }
+        // }
+        // catch (error: any) {
+        //     console.error("Error sending email:", error);
+        //     // return res.status(Internal server error).json({ message: "Internal server error" });
+        //     return NextResponse.json({ message: "Internal server error." }, { status: 500 });
+        // }
+
+        const response = await SendEmail({ email: email, emailType: 'Verify', token: token, code: 0 })
+        console.log("resposeSend", response);
+
         return NextResponse.json({ message: "User registered." }, { status: 201 });
     } catch (error) {
         return NextResponse.json(

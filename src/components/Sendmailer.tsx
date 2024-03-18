@@ -42,8 +42,7 @@ export const SendEmail = async ({ email, emailType, token, code }: any) => {
             <p>Hi there,</p>
             <p>We've received a request to verify your email address. Please click the button below to complete the verification process.</p>
             <div style="display:flex;justify-content:center">
-            <a href="${process.env.DOMAIN}/verifyEmail?token=${encodeURIComponent(token)}&email=${encodeURIComponent(email)}" style="display: inline-block; background-color: #1a1a1c; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 8px; width: 120px; transition: background-color 0.3s ease; ">Activate account</a>
-            </div>
+            
             <p>If you didn't request this, you can safely ignore this email.</p>
           </div>
           <div style="text-align: center; color: #888; font-size: 14px;">
@@ -76,25 +75,25 @@ export const SendEmail = async ({ email, emailType, token, code }: any) => {
         }`
     }
 
-    // const mailResponse = await transport.sendMail(mailOptions, (error, info) => {
-    //   if (error) {
-    //     console.log(error)
-    //   }
-    //   else {
-    //     console.log('email sent successfully')
-    //   }
-    // });
-
     const mailResponse = await transport.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.log(error);
-        throw new Error(`Failed to send email: ${error.message}`);
+        console.log(error)
       }
       else {
-        // console.log('email sent successfully');
-        console.log('Email sent successfully:', info.response);
+        console.log('email sent successfully')
       }
     });
+
+    // const mailResponse = await transport.sendMail(mailOptions, (error, info) => {
+    //   if (error) {
+    //     console.log(error);
+    //     throw new Error(`Failed to send email: ${error.message}`);
+    //   }
+    //   else {
+    //     // console.log('email sent successfully');
+    //     console.log('Email sent successfully:', info.response);
+    //   }
+    // });
 
   }
   catch (error: any) {
