@@ -20,6 +20,7 @@ import { useMediaQuery } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import ChangePasswordModal from '../forgotPopups/ChangePasswordModal';
 import { Divider, Box, } from '@mui/material';
+import axios from "axios"
 
 // import { SendEmail } from './Sendmailer';
 
@@ -55,6 +56,26 @@ const RegisterForm: React.FC = () => {
     const [verificationCode, setVerificationCode] = useState(0);
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+
+    async function registerUser(values: any) {
+        try {
+            const response = await axios.post("/api/register", {
+                name: values.name,
+                email: values.email,
+                password: values.password,
+            });
+
+            // Handle response
+            console.log(response.data);
+            // Additional logic upon successful registration
+        } catch (error: any) {
+            // Handle error
+            console.error(error.response ? error.response.data : error.message);
+            // Additional error handling logic
+        }
+    }
+
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -122,17 +143,26 @@ const RegisterForm: React.FC = () => {
                     return;
                 }
 
-                const res = await fetch("api/register", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        name: values.name,
-                        email: values.email,
-                        password: values.password,
-                    }),
+                // const res = await fetch("api/register", {
+                //     method: "POST",
+                //     headers: {
+                //         "Content-Type": "application/json",
+                //     },
+                //     body: JSON.stringify({
+                //         name: values.name,
+                //         email: values.email,
+                //         password: values.password,
+                //     }),
+                // });
+
+                const res = await axios.post("/api/register", {
+                    name: values.name,
+                    email: values.email,
+                    password: values.password,
                 });
+
+                // Handle response
+                console.log(res.data);
 
                 if (res.ok) {
                     toast.success("Verification mail sent successfully.");
