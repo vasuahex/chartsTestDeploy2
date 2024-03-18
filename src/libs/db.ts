@@ -21,7 +21,7 @@ const openDatabase = () => {
 };
 
 export const saveFileToMongoDB = async (bodyDetail: any) => {
-  const newBody= bodyDetail.map((each: any)=>{return {...each, status:'currentlyInUse',sourceName:'firstFile', fileType:'csv',description:'description'}})
+  const newBody = bodyDetail.map((each: any) => { return { ...each, status: 'currentlyInUse', sourceName: 'firstFile', fileType: 'csv', description: 'description' } })
   // bodyDetail= [...bodyDetail, ]
   try {
     const res = await fetch("/api/saveSourceData", {
@@ -52,7 +52,7 @@ export const saveFileToMongoDB = async (bodyDetail: any) => {
 
 
 export const saveSourceContent = async (content: any) => {
-  const newBody= content.map((each: any)=>{return {...each,sourceName:'firstFile', fileType:'csv',description:'description'}})
+  const newBody = content.map((each: any) => { return { ...each, sourceName: 'firstFile', fileType: 'csv', description: 'description' } })
   try {
     const response = await fetch('/api/updateSourceData', { // Replace '/api/yourEndpoint' with your actual endpoint path
       method: 'POST',
@@ -81,7 +81,7 @@ export const saveSourceContent = async (content: any) => {
 
 
 export const renameSourceContent = async (contentId: any, newFileName: any) => {
-  const updateData= {contentId, newFileName, newSourceType: 'newSourceType'}
+  const updateData = { contentId, newFileName, newSourceType: 'newSourceType' }
   try {
     const response = await fetch('/api/updateSourceData', { // Replace '/api/yourEndpoint' with your actual endpoint path
       method: 'POST',
@@ -110,7 +110,7 @@ export const renameSourceContent = async (contentId: any, newFileName: any) => {
 
 
 export const updateSourceStatus = async (contentId: any, newSourceStatus: any) => {
-  const updateData= {contentId, newSourceStatus, }
+  const updateData = { contentId, newSourceStatus, }
   try {
     const response = await fetch('/api/updateSourceData', { // Replace '/api/yourEndpoint' with your actual endpoint path
       method: 'POST',
@@ -165,7 +165,7 @@ export const getContentById = async (contentId: any) => {
 }
 
 
-export const updateDataItem = async ({ updateType, contentId, newFileName, newSourceType }:{updateType: string ,contentId?: string, newFileName?: string, newSourceType?: string}) => {
+export const updateDataItem = async ({ updateType, contentId, newFileName, newSourceType }: { updateType: string, contentId?: string, newFileName?: string, newSourceType?: string }) => {
   try {
     const response = await fetch('/api/updateSourceData', { // Adjust the URL based on your API route
       method: 'PATCH',
@@ -330,7 +330,7 @@ export const getCodeFromDB = async (id?: any) => {
   // console.log(response);
 
 
-  
+
 
   const db = await openDatabase();
   const transaction = db.transaction("codeStore", "readonly");
@@ -350,11 +350,11 @@ export const getCodeFromDB = async (id?: any) => {
   });
 };
 
-export const getSourceContentById = async (contentId ? : any) => {
-  console.log('contentId',contentId)
+export const getSourceContentById = async (contentId?: any) => {
+  console.log('contentId', contentId)
   const baseUrl = "/api/getSourceData";
   const url = contentId ? `${baseUrl}/${contentId}` : baseUrl;
-  console.log('contentId',url)
+  console.log('contentId', url)
   try {
     const res = await fetch(url, {
       method: "GET",
@@ -441,6 +441,9 @@ export const removeCodeFromDB = async (id: any) => {
   });
 };
 
+
+
+
 // /* eslint-disable @typescript-eslint/no-explicit-any */
 // const openDatabase = () => {
 //   return new Promise<IDBDatabase>((resolve, reject) => {
@@ -499,3 +502,33 @@ export const removeCodeFromDB = async (id: any) => {
 //     };
 //   });
 // };
+
+
+export async function sendEmailThruApi({ email, emailType, token, code }: { email: any, emailType: any, token: any, code: any }) {
+  try {
+    const response = await fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+        emailType,
+        token,
+        code,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || 'Failed to send email');
+    }
+
+    console.log('Email sent successfully:', data);
+    // Additional success handling as needed
+  } catch (error: any) {
+    console.error('Error sending email:', error.message);
+    // Additional error handling as needed
+  }
+}

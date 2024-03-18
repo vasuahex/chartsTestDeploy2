@@ -26,8 +26,8 @@ export async function POST(req: any) {
         //     return NextResponse.json({ message: "Internal server error." }, { status: 500 });
         // }
 
-        const response = await SendEmail({ email: email, emailType: 'Verify', token: token, code: 0 })
-        console.log("resposeSend", response);
+        // const response = await SendEmail({ email: email, emailType: 'Verify', token: token, code: 0 })
+        // console.log("resposeSend", response);
 
         return NextResponse.json({ message: "User registered." }, { status: 201 });
     } catch (error) {

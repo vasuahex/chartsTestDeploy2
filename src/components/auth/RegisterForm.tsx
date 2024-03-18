@@ -21,6 +21,8 @@ import { makeStyles } from '@mui/styles';
 import ChangePasswordModal from '../forgotPopups/ChangePasswordModal';
 import { Divider, Box, } from '@mui/material';
 import axios from "axios"
+import { sendEmailThruApi } from '@/libs/db';
+import crypto from 'crypto';
 
 // import { SendEmail } from './Sendmailer';
 
@@ -143,23 +145,23 @@ const RegisterForm: React.FC = () => {
                     return;
                 }
 
-                // const res = await fetch("api/register", {
-                //     method: "POST",
-                //     headers: {
-                //         "Content-Type": "application/json",
-                //     },
-                //     body: JSON.stringify({
-                //         name: values.name,
-                //         email: values.email,
-                //         password: values.password,
-                //     }),
-                // });
-
-                const res = await axios.post("/api/register", {
-                    name: values.name,
-                    email: values.email,
-                    password: values.password,
+                const res = await fetch("api/register", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        name: values.name,
+                        email: values.email,
+                        password: values.password,
+                    }),
                 });
+
+                // const res: any = await axios.post("/api/register", {
+                //     name: values.name,
+                //     email: values.email,
+                //     password: values.password,
+                // });
 
                 // Handle response
                 console.log(res.data);
@@ -172,6 +174,15 @@ const RegisterForm: React.FC = () => {
                 } else {
                     toast.error("User registration failed.");
                 }
+                const token = crypto.randomBytes(20).toString('hex');
+
+                // Assuming emailType is 'Verify' for user registration
+                await sendEmailThruApi({
+                    email: values.email,
+                    emailType: 'Verify',
+                    token: token,
+                    code: 0, // Assuming 'code' is not needed for verification emails
+                });
             } catch (error) {
                 console.log("Error during registration: ", error);
             }
