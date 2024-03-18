@@ -76,12 +76,23 @@ export const SendEmail = async ({ email, emailType, token, code }: any) => {
         }`
     }
 
+    // const mailResponse = await transport.sendMail(mailOptions, (error, info) => {
+    //   if (error) {
+    //     console.log(error)
+    //   }
+    //   else {
+    //     console.log('email sent successfully')
+    //   }
+    // });
+
     const mailResponse = await transport.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.log(error)
+        console.log(error);
+        throw new Error(`Failed to send email: ${error.message}`);
       }
       else {
-        console.log('email sent successfully')
+        // console.log('email sent successfully');
+        console.log('Email sent successfully:', info.response);
       }
     });
 
